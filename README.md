@@ -35,3 +35,8 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
+### DOCKER AS NON ROOT USER
+```bash
+sudo usermod -aG docker $USER
+newgrp docker
+```
